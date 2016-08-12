@@ -11,12 +11,8 @@
 		<title>Enem Tasks</title>
 	</head>
 	<body>
-		<?php// include_once '/templates/html/nav-bar.html' ?>
-
-			<!-- <div class="container-fluid"> -->
-				<div class="row-fluid" id="app-container"></div>
-			<!-- </div> -->
-		<script type='text/babel' src='/templates/components/app-enem-tasks.js'></script>
+		<div class="row-fluid" id="app-container"></div>
+		<script type='text/babel' src='/js/app-enem-tasks.js'></script>
 
 		<script type="text/javascript" src='/assets/jquery.min.js'></script>
 		<script type="text/javascript" src='/assets/bootstrap-3.3.6-dist/js/bootstrap.min.js'></script>
