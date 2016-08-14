@@ -1,38 +1,31 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'].'/classes/BancoDeDados.php');
+require_once($_SERVER['DOCUMENT_ROOT'].'/classes/Connect.php');
 
+// classe usada para realizar o login e informar possiveis error durante o processo
 class Auth{
 
 	private $loginStatus = false;
 	private $lgErrorMsg = '';
 	function __construct($login, $senha){
 
-		$bd = new BancoDeDados();
+		$bd = new Connect();
 
 		$pass = $senha;
 
-		$fields = array('nome','id');
-		$table = 'user';
-		$where = "where email = '$login' and senha = '$pass'";
-		$result = $bd->select($fields,$table,$where);
+		$sql = "select nome, id from user where email = '$login' and senha = '$pass'";
+		$result = $bd->query($sql);
 
-		if(!$result){
+
+		if(sizeof($result) == 0){
 			$this->loginStatus = false;
-			$this->lgErrorMsg = 'Erro na conexão com banco de dados';
+			$this->lgErrorMsg = 'Email ou senha inválidos';
 		}else{
 
-			if(mysqli_num_rows($result) >= 1){
+			$r = $result[0];
 
-				$r = mysqli_fetch_array($result);
-
-				$_SESSION['nome']  = $r['nome'];
-				$_SESSION['uid']    = $r['id'];
-				$this->loginStatus = true;
-
-			}else{
-				$this->loginStatus = false;
-				$this->lgErrorMsg = 'Email ou senha inválidos';
-			}
+			$_SESSION['nome']  = $r['nome'];
+			$_SESSION['uid']   = $r['id'];
+			$this->loginStatus = true;
 		}
 	}
 

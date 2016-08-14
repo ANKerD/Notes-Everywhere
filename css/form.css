@@ -1,0 +1,9 @@
+.disabled{
+	background: #1F3E55;
+}
+.disabled:hover{
+	background: #2F4E65;
+}
+.invisible{
+	display: none;
+}

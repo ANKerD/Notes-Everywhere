@@ -10,8 +10,6 @@ create table User(
     primary key(id)
 );
 
-insert into user(email,nome,senha) values('prima@primeiro.com','prima','123');
-
 create table Disciplina(
 	id int auto_increment not null,
 	nome varchar(30) not null,
