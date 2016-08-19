@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'].'/classes/Connect.php');
+require_once('Connect.php');
 $params = $_REQUEST;
 
 // controla o acesso as anotaçãoes e permite a adição de outras

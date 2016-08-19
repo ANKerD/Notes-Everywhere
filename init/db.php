@@ -1,7 +1,7 @@
 <?php
 // Arquivo usado para inicializar o banco pois quando iserio caracteres especiais
 // pelo mysql diretamente são causados problemas para e recuperação dos dados.
-require_once($_SERVER['DOCUMENT_ROOT'].'/classes/Connect.php');
+require_once('../classes/Connect.php');
 $db = "
 	drop database TaskEnem2;
 	create database TaskEnem2;

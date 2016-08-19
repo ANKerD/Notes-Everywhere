@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	require_once '/classes/auth.php';
+	require_once 'classes/auth.php';
 
 	$ok = true;
 	$error = "";
@@ -30,13 +30,13 @@
 	<title>Sign-Up/Login Form</title>
 	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
 
-	<link rel="stylesheet" href="/assets/login/css/normalize.css">
-	<link rel="stylesheet" href="/assets/login/css/style.css">
+	<link rel="stylesheet" href="assets/login/css/normalize.css">
+	<link rel="stylesheet" href="assets/login/css/style.css">
 
-	<link rel="stylesheet" href="/css/form.css">
+	<link rel="stylesheet" href="css/form.css">
 
-	<script type="text/javascript" src="/assets/jquery.min.js"></script>
-	<script type="text/javascript" src="/js/submit-register-form.js"></script>
+	<script type="text/javascript" src="assets/jquery.min.js"></script>
+	<script type="text/javascript" src="js/submit-register-form.js"></script>
 </head>
 <body>
 	<div class="form">
@@ -112,8 +112,8 @@
 			</div>
 		</div><!-- tab-content -->
 	</div> <!-- /form -->
-	<script src='/assets/jquery.min.js'></script>
-	<script src='/assets/login/js/index.js'></script>
-	<script src='/js/submit-register-form.js'></script>
+	<script src='assets/jquery.min.js'></script>
+	<script src='assets/login/js/index.js'></script>
+	<script src='js/submit-register-form.js'></script>
 </body>
 </html>

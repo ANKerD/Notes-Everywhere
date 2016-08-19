@@ -1,5 +1,5 @@
 <?php
-require_once($_SERVER['DOCUMENT_ROOT'].'/classes/Connect.php');
+require_once('classes/Connect.php');
 
 // classe usada para realizar o login e informar possiveis error durante o processo
 class Auth{

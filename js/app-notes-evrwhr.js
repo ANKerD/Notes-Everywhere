@@ -284,7 +284,7 @@ var SchoolNotesBox = React.createClass({
 
 				// enviapara o servidpr a nova anotação
 				$.ajax({
-					url: '/classes/Disciplinas.php',
+					url: 'classes/Disciplinas.php',
 					type: 'POST',
 					dataType: 'json',
 					data: {
@@ -316,7 +316,7 @@ var SchoolNotesBox = React.createClass({
 		}
 
 		$.ajax({
-			url: '/classes/Disciplinas.php',
+			url: 'classes/Disciplinas.php',
 			type: 'post',
 			dataType: 'json',
 			data: {
